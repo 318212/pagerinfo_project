@@ -10,11 +10,12 @@ As far as it technically against Facebook ToS' to use Pager it is in fact not br
 In short, Facebook Pager can help their users to fully disconnect from all brainrot and losing time on doomscrolling while still having access to potentially important information. We can fully focus on doing something else while our Pager is keeping us updated ONLY on gravely important matters in the text format.<br><br>
 
 ROADMAP of the updates:<br>
-[] 0.Delivery of the clear code version (repository private -> public)<br>
+[X] 0.Delivery of the clear code version (repository private -> public)<br>
 [] 1.Fully functional webUI and mobile app.<br>
-[] 2.Security (authorization, performing of various security tests)<br>
-[] 3.Introducing built-in AI agent in order to try to furthermore lessen need for wasting our time and enhance customization.<br>
-[] 4.Other features that will be collected through feedback of the users.<br><br>
+[] 2.Solving environmental matters (most likely pager will run as a service in docker-container)
+[] 3.Security (authorization, performing of various security tests - mostly for showcase)<br>
+[] 4.Introducing built-in AI agent in order to try to furthermore lessen need for wasting our time and enhance customization.<br>
+[] 5.Other features that will be collected through feedback of the users.<br><br>
  
 ___________________________________________________________________________________________________________________________________________________________________________________
 ___________________________________________________________________________________________________________________________________________________________________________________
