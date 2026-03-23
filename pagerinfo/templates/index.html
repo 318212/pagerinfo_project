@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="PagerInfo">
+
+  <title>PagerInfo</title>
+
+  <link rel="manifest" href="/manifest.json">
+  <link rel="apple-touch-icon" href="/static/icons/icon-192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Serif:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/app.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="topbar-left">
+      <span class="logo">PAGER<span class="logo-accent">INFO</span></span>
+    </div>
+    <div class="topbar-right">
+      <span class="unread-badge" id="unreadBadge"></span>
+      <button class="icon-btn" id="filterBtn" title="Filter sources">⊞</button>
+      <button class="icon-btn" id="markAllBtn" title="Mark all read">✓</button>
+      <button class="icon-btn" id="refreshBtn" title="Refresh">↻</button>
+    </div>
+  </header>
+
+  <nav class="source-nav" id="sourceNav" hidden>
+    <button class="pill active" data-source="">All</button>
+  </nav>
+
+  <div class="statusbar" id="statusBar">
+    <span id="statusText">Loading...</span>
+    <span id="lastScrape"></span>
+  </div>
+
+  <main class="feed" id="feed">
+    <div class="loading-state" id="loadingState">
+      <div class="spinner"></div>
+      <p>Fetching posts...</p>
+    </div>
+    <div class="empty-state" id="emptyState" hidden>
+      <p class="empty-icon">◎</p>
+      <p>No unread posts.</p>
+      <p class="empty-sub">Check back after the next scrape cycle.</p>
+    </div>
+  </main>
+
+  <template id="postTemplate">
+    <article class="post-card" data-id="">
+      <div class="post-meta">
+        <span class="post-author"></span>
+        <span class="post-source-tag"></span>
+        <span class="post-time"></span>
+      </div>
+      <div class="post-body"></div>
+      <div class="post-actions">
+        <button class="read-btn">Mark read</button>
+      </div>
+    </article>
+  </template>
+
+  <div class="install-banner" id="installBanner" hidden>
+    <span>Install PagerInfo as an app</span>
+    <button id="installBtn">Install</button>
+    <button id="installDismiss">✕</button>
+  </div>
+
+  <script src="/static/js/app.js"></script>
+</body>
+</html>

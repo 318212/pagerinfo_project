@@ -1,0 +1,4 @@
+venv/
+vapid_keys.json
+systemd_services.txt
+data/

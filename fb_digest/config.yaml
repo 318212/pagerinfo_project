@@ -1,0 +1,35 @@
+# fb_digest/config.example.yaml
+
+# Max posts per scrape (80 posts/30 minutes)
+max_posts_per_digest: 80
+
+# Ignore posts shorter than this many characters (idiotic, idk why its here?)
+min_post_length: 1
+
+output_dir: output
+
+#Selection of what to monitor (scrape) - this selection's functionality must be in the UI later
+sources:
+  # link to main feed 
+  - url: https://www.facebook.com/
+    label: My Feed
+    type: feed
+    scroll_rounds: 8
+
+  # A friend's profile wall
+  # - url: https://www.facebook.com/some.friend
+  #   label: John Doe
+  #   type: profile
+  #   scroll_rounds: 4
+
+  # A group
+  # - url: https://www.facebook.com/groups/some-group-name
+  #   label: Some Interesting Group
+  #   type: group
+  #   scroll_rounds: 6
+
+  # A public page
+  # - url: https://www.facebook.com/somepage
+  #   label: Some Page
+  #   type: page
+  #   scroll_rounds: 4

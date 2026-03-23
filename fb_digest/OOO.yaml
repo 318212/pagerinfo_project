@@ -1,0 +1,38 @@
+# fb_digest/config.example.yaml
+max_posts_per_digest: 80
+
+# Ignore posts shorter than this many characters (reduces noise)
+min_post_length: 40
+
+# Where to save digest HTML files
+output_dir: output
+
+# ── Sources ────────────────────────────────────────────
+# Add any Facebook URLs you want to monitor.
+# type can be: feed | profile | group | page
+# scroll_rounds: how many scroll steps (more = more posts, slower)
+#
+sources:
+  # Your own main feed
+  - url: https://www.facebook.com/
+    label: My Feed
+    type: feed
+    scroll_rounds: 8
+
+  # A friend's profile wall
+  # - url: https://www.facebook.com/some.friend
+  #   label: John Doe
+  #   type: profile
+  #   scroll_rounds: 4
+
+  # A group
+  # - url: https://www.facebook.com/groups/some-group-name
+  #   label: Some Interesting Group
+  #   type: group
+  #   scroll_rounds: 6
+
+  # A public page
+  # - url: https://www.facebook.com/somepage
+  #   label: Some Page
+  #   type: page
+  #   scroll_rounds: 4
